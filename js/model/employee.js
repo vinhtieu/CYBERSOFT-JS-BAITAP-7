@@ -7,9 +7,7 @@ export default class Employee {
     ngayLam,
     salary,
     position,
-    gioLam,
-    tongTien,
-    xepLoai
+    gioLam
   ) {
     (this.account = account),
       (this.name = name),
@@ -19,7 +17,30 @@ export default class Employee {
       (this.salary = salary),
       (this.position = position),
       (this.gioLam = gioLam),
-      (this.tongTien = tongTien),
-      (this.xepLoai = xepLoai);
+      (this.tongLuong = this.tinhLuong()),
+      (this.xepLoai = this.xepLoai());
+  }
+
+  tinhLuong() {
+    switch (this.position) {
+      case "Sếp":
+        return (this.salary * 3);
+      case "Trưởng phòng":
+        return this.salary * 2;
+      case "Nhân viên":
+        return this.salary;
+    }
+  }
+
+  xepLoai() {
+    if (this.gioLam >= 192) {
+      return "Xuất Sắc";
+    } else if (this.gioLam >= 176) {
+      return "Giỏi";
+    } else if (this.gioLam >= 160) {
+      return "Khá";
+    } else {
+      return "Trung Bình";
+    }
   }
 }

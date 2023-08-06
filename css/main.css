@@ -1,3 +1,13 @@
+.success {
+  display: block;
+  color: green;
+}
+
+.error {
+  display: block;
+  color: red;
+}
+
 .sp-thongbao {
   color: red;
   margin-left: 2px;
@@ -32,12 +42,13 @@
   margin-bottom: 0;
 }
 
-/* .table-action-btns {
-  display: flex;
-  gap: 10px;
-  height: 100%;
-} */
+.table td {
+  vertical-align: middle;
+}
 
+img.ui-datepicker-trigger {
+  cursor: pointer;
+}
 .fa-minus-circle {
   color: red;
 }
